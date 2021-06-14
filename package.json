@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "test": "yarn run build",
     "build": "vue-cli-service build"
   },
   "dependencies": {
@@ -16,7 +17,16 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0-0"
   },
-  "browserslist": ["> 1%", "last 2 versions", "not dead"],
-  "keywords": ["vue", "pinia", "vuex", "store"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "keywords": [
+    "vue",
+    "pinia",
+    "vuex",
+    "store"
+  ],
   "description": "Demo using Pinia with Vue 3"
 }
