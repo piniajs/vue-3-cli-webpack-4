@@ -28,7 +28,7 @@
 
       <p>
         Open
-        <a target="_blank" href="https://j4qzw.csb.app/">the CodeSandbox</a>
+        <a target="_blank" href="https://y4dfi.csb.app/">the CodeSandbox</a>
         in a different tab and play around with the devtools. You have access to
         all the stores via a global variable
         <code>stores</code>
@@ -37,9 +37,10 @@
     <p v-else>
       Try opening the devtools and playing around with the store. All the stores
       via a global variable
-      <code>stores</code>. <br />Find the code at
-      <a href="https://codesandbox.io/s/pinia-vue-3-demo-j4qzw"
-        >https://codesandbox.io/s/pinia-vue-3-demo-j4qzw</a
+      <code>stores</code>. <br />Find the code
+      <a
+        href="https://codesandbox.io/s/github/posva/pinia-vue-3-demo-codesandbox"
+        >on CodeSandbox</a
       >.
     </p>
 
