@@ -8,14 +8,14 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.16.1",
-    "pinia": "^2.0.0-rc.4",
-    "vue": "^3.2.2"
+    "core-js": "^3.16.2",
+    "pinia": "^2.0.0-rc.6",
+    "vue": "^3.2.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
-    "@vue/compiler-sfc": "^3.2.2"
+    "@vue/compiler-sfc": "^3.2.4"
   },
   "browserslist": [
     "> 1%",
