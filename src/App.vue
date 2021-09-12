@@ -80,8 +80,6 @@ export default defineComponent({
       const n = await cart.purchaseItems()
 
       console.log(`Bought ${n} items`)
-
-      cart.rawItems = []
     }
 
     window.stores = { user, cart, addItemToCart }
