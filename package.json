@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.18.1",
-    "pinia": "^2.0.0-rc.10",
+    "pinia": "^2.0.0-rc.11",
     "vue": "^3.2.19"
   },
   "devDependencies": {
