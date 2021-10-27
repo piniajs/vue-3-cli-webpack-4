@@ -2,10 +2,11 @@
   "name": "pinia-vue-3-demo",
   "version": "0.1.0",
   "private": true,
+  "description": "Demo using Pinia with Vue 3",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "test": "yarn run build",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "test": "yarn run build"
   },
   "dependencies": {
     "core-js": "^3.18.3",
@@ -14,8 +15,10 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.14",
+    "@vue/cli-plugin-typescript": "^4.5.0",
     "@vue/cli-service": "^4.5.14",
-    "@vue/compiler-sfc": "^3.2.20"
+    "@vue/compiler-sfc": "^3.2.20",
+    "typescript": "^4.1.5"
   },
   "browserslist": [
     "> 1%",
@@ -27,6 +30,5 @@
     "pinia",
     "vuex",
     "store"
-  ],
-  "description": "Demo using Pinia with Vue 3"
+  ]
 }

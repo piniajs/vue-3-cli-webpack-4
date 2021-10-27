@@ -1,119 +1,77 @@
 <template>
-  <div id="app">
-    <h1>Hello Pinia 🍍!</h1>
+  <Layout>
+    <div>
+      <div style="margin: 1rem 0;">
+        <PiniaLogo />
+      </div>
 
-    <h2>Logged in as {{ user.name }}</h2>
+      <p>
+        This is an example store to test out devtools. Try one of the following with the devtools open:
+        <br />
+      </p>
 
-    <form @submit.prevent="addItemToCart">
-      <input type="text" v-model="itemName" />
-      <button>Add</button>
-    </form>
-
-    <form @submit.prevent="buy">
-      <ul>
-        <li v-for="item in cart.items" :key="item.name">
-          {{ item.name }} ({{ item.amount }})
-          <button @click="cart.removeItem(item.name)" type="button">X</button>
+      <ol>
+        <li>Use the different increment actions</li>
+        <li>Change the counter directly from the devtools</li>
+        <li>Use decrement to zero to see how action groups work</li>
+        <li>
+          Click
+          <b>Test Errors</b> and immediately after
+          <b>increment</b> the store
         </li>
-      </ul>
+        <li>While the dev server is running, try changing counter.changeMe, adding, and removing new state properties</li>
+      </ol>
 
-      <button :disabled="!user.name">Buy</button>
-      <button :disabled="!cart.items.length" @click="clearCart" type="button">
-        Clear the cart
+      <h2>Counter Store</h2>
+
+      <p>Counter :{{ counter.n }}. Double: {{ counter.double }}</p>
+
+      <p>Increment the Store:</p>
+
+      <button @click="counter.increment()">+1</button>
+      <button @click="counter.increment(10)">+10</button>
+      <button @click="counter.increment(100)">+100</button>
+      <button @click="counter.n++">Direct Increment</button>
+      <button
+        @click="
+          counter.$patch((state) => {
+            state.n++
+            state.incrementedTimes++
+          })
+        "
+      >Direct patch</button>
+
+      <p>Other actions:</p>
+
+      <button @click="counter.fail">Test Errors</button>
+      <button @click="counter.decrementToZero()">Decrement to zero</button>
+      <button @click="counter.changeMe()">
+        <code>counter.changeMe()</code>
       </button>
-    </form>
 
-    <template v-if="isEmbed">
       <hr />
 
       <p>
-        Open
-        <a target="_blank" href="https://y4dfi.csb.app/">the CodeSandbox</a>
-        in a different tab and play around with the devtools. You have access to
-        all the stores via a global variable
-        <code>stores</code>
+        Complete store state via
+        <code>store.$state</code>:
       </p>
-    </template>
-    <p v-else>
-      Try opening the devtools and playing around with the store. All the stores
-      via a global variable
-      <code>stores</code>. <br />Find the code
-      <a
-        href="https://codesandbox.io/s/github/posva/pinia-vue-3-demo-codesandbox"
-        >on CodeSandbox</a
-      >.
-    </p>
 
-    <footer>Using Vue v{{ vueVersion }} and Pinia v{{ piniaVersion }}.</footer>
-  </div>
+      <pre>{{ counter.$state }}</pre>
+    </div>
+  </Layout>
 </template>
 
-<script>
-import { ref, defineComponent } from 'vue'
-import { useUserStore } from './stores/user'
-import { useCartStore } from './stores/cart'
-import { version as piniaVersion } from 'pinia/package.json'
-import { version as vueVersion } from 'vue/package.json'
+<script setup lang="ts">
+import Layout from '@/layouts/default.vue'
+import { useCounter } from '@/stores/counter'
+import PiniaLogo from '@/components/PiniaLogo.vue'
 
-export default defineComponent({
-  name: 'App',
-  setup() {
-    const user = useUserStore()
-    const cart = useCartStore()
-
-    const itemName = ref('')
-    const isEmbed = ref(window !== window.top)
-
-    function addItemToCart() {
-      if (!itemName.value) return
-      cart.addItem(itemName.value)
-      itemName.value = ''
-    }
-
-    function clearCart() {
-      if (window.confirm('Are you sure you want to clear the cart?')) {
-        cart.rawItems = []
-      }
-    }
-
-    async function buy() {
-      const n = await cart.purchaseItems()
-
-      console.log(`Bought ${n} items`)
-    }
-
-    window.stores = { user, cart, addItemToCart }
-
-    return {
-      itemName,
-      addItemToCart,
-      isEmbed,
-
-      cart,
-
-      user,
-      buy,
-      clearCart,
-
-      vueVersion,
-      piniaVersion,
-    }
-  },
-})
+const counter = useCounter()
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  padding: 1rem 2rem;
-}
-
-footer {
-  font-size: 0.75rem;
-  text-align: right;
-  color: darkgray;
+<style scoped>
+button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 </style>
