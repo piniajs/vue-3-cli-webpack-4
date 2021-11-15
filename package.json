@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.19.1",
-    "pinia": "^2.0.2",
+    "pinia": "^2.0.3",
     "vue": "^3.2.21"
   },
   "devDependencies": {
