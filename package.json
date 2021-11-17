@@ -4,9 +4,9 @@
   "private": true,
   "description": "Demo using Pinia with Vue 3",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve --port=3000",
     "build": "vue-cli-service build",
-    "test": "yarn run build"
+    "test": "cypress run"
   },
   "dependencies": {
     "core-js": "^3.19.1",
@@ -18,6 +18,8 @@
     "@vue/cli-plugin-typescript": "^4.5.15",
     "@vue/cli-service": "^4.5.15",
     "@vue/compiler-sfc": "^3.2.21",
+    "cypress": "^9.0.0",
+    "prettier": "^2.4.1",
     "typescript": "^4.4.4"
   },
   "browserslist": [

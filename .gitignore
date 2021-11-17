@@ -21,3 +21,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+cypress/fixtures
+cypress/screenshots
+cypress/videos
