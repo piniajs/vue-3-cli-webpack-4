@@ -10,19 +10,19 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "core-js": "^3.19.2",
+    "core-js": "^3.19.3",
     "pinia": "^2.0.6",
-    "vue": "^3.2.23"
+    "vue": "^3.2.26"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-typescript": "^4.5.15",
     "@vue/cli-service": "^4.5.15",
-    "@vue/compiler-sfc": "^3.2.23",
+    "@vue/compiler-sfc": "^3.2.26",
     "cypress": "^9.1.1",
     "prettier": "^2.5.1",
     "serve": "^13.0.2",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.3"
   },
   "browserslist": [
     "> 1%",
