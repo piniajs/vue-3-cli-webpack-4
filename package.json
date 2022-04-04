@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "core-js": "^3.21.1",
-    "pinia": "^2.0.12",
+    "pinia": "^2.0.13",
     "vue": "^3.2.31"
   },
   "devDependencies": {
@@ -19,8 +19,8 @@
     "@vue/cli-plugin-typescript": "^4.5.17",
     "@vue/cli-service": "^4.5.17",
     "@vue/compiler-sfc": "^3.2.31",
-    "cypress": "^9.5.2",
-    "prettier": "^2.6.1",
+    "cypress": "^9.5.3",
+    "prettier": "^2.6.2",
     "serve": "^13.0.2",
     "typescript": "^4.6.3"
   },
