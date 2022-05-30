@@ -10,7 +10,7 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "core-js": "^3.22.6",
+    "core-js": "^3.22.7",
     "pinia": "^2.0.14",
     "vue": "^3.2.36"
   },
@@ -19,10 +19,10 @@
     "@vue/cli-plugin-typescript": "^4.5.17",
     "@vue/cli-service": "^4.5.17",
     "@vue/compiler-sfc": "^3.2.36",
-    "cypress": "^9.6.1",
+    "cypress": "^9.7.0",
     "prettier": "^2.6.2",
     "serve": "^13.0.2",
-    "typescript": "^4.6.4"
+    "typescript": "^4.7.2"
   },
   "browserslist": [
     "> 1%",
