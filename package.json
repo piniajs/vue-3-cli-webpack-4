@@ -12,13 +12,13 @@
   "dependencies": {
     "core-js": "^3.25.5",
     "pinia": "^2.0.23",
-    "vue": "^3.2.40"
+    "vue": "^3.2.41"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
-    "@vue/compiler-sfc": "^3.2.40",
+    "@vue/compiler-sfc": "^3.2.41",
     "cypress": "^9.7.0",
     "prettier": "^2.7.1",
     "serve": "^14.0.1",
