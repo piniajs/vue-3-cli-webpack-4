@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: cypress-io/github-action@v2
+      - uses: cypress-io/github-action@v7.1.9
         with:
           headless: true
           # env: PORT=4000
